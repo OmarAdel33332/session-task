@@ -53,7 +53,7 @@ header {
     }
     .caption{
         width: 52%;
-        min-width: 50vh;
+        min-width: 40vh;
         height: 90vh;
         margin: 0 auto;
         color: var(--white-color);
