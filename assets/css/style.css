@@ -7,10 +7,10 @@
     --black-color :#000;
     --default-font-size : 16px;
     @media (max-width: 575.98px) { 
-        --default-font-size : 10px !important;
+        --default-font-size : 12px !important;
      }
     @media (max-width: 767.98px) { 
-        --default-font-size : 12px;
+        --default-font-size : 13px;
     }
     @media (max-width: 991.98px) { 
         --default-font-size : 14px ;
@@ -53,6 +53,7 @@ header {
     }
     .caption{
         width: 52%;
+        min-width: 50vh;
         height: 90vh;
         margin: 0 auto;
         color: var(--white-color);
@@ -66,9 +67,10 @@ header {
         .find-out-btn{
             color: var(--white-color);
             background-color: var(--main-color);
-            padding: 2% 5%;
-            font-weight: 500;
-            margin-top: 4%;
+            width: 30%;
+            min-width: 20vh;
+            height: 10vh;
+            font-size: 0.9rem;
         }
         .find-out-btn:hover{
             background-color: #b6482a;
@@ -85,8 +87,9 @@ header {
     padding: 0 25%;
     .container{
         .btn{
-            width: 25vh;
-            height: 9vh;
+            width: 30%;
+            min-width: 20vh;
+            height: 10vh;
             font-size: 0.9rem;
         }
         p ,h2{
