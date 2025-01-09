@@ -8,6 +8,9 @@
     --default-font-size : 16px;
     @media (max-width: 575.98px) { 
         --default-font-size : 12px !important;
+        button.navbar-toggler{
+            display: none;     
+        }
      }
     @media (min-width: 575.99px ) and (max-width: 767.98px) { 
         --default-font-size : 13px;
@@ -191,4 +194,20 @@ header {
         color: var(--main-color) !important;
         cursor: pointer;
     }
+}
+/* start scrollup */
+.scroll-up{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    width: 10vh;
+    height: 10vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
 }

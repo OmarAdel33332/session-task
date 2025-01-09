@@ -35,5 +35,17 @@ if (window.scrollY > 0) {
     }
     );
 }});
+let scrollUp = document.querySelector('.scroll-up');
+let about = document.querySelector('.about');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > about.offsetTop) {
+        scrollUp.style = 'display: flex';
+    } else {
+        scrollUp.style = 'display: none';
+    }
+});
+scrollUp.addEventListener('click', function() {
+    window.scrollTo(0,0);
+});
 
 
