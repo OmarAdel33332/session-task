@@ -211,3 +211,11 @@ header {
     z-index: 1000;
     cursor: pointer;
 }
+.invalid-label{
+    color: red;
+    font-size: 1.2rem;
+    text-align: left;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+}
