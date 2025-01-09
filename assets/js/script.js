@@ -14,6 +14,11 @@ window.addEventListener('scroll', function() {
             });
             navLinks[index].classList.add('active');
         }
+        else if (scroll < sections[0].offsetTop - navHeight - 130) {
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active');
+            });
+        }
     });
 });
 for (let i = 0; i < links.length; i++) {
