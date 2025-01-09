@@ -8,8 +8,11 @@
     --default-font-size : 16px;
     @media (max-width: 575.98px) { 
         --default-font-size : 12px !important;
+        button.navbar-toggler{
+            display: none;     
+        }
      }
-    @media (max-width: 767.98px) { 
+    @media (min-width: 575.99px ) and (max-width: 767.98px) { 
         --default-font-size : 13px;
     }
     @media (max-width: 991.98px) { 
@@ -41,7 +44,7 @@ header {
     background-blend-mode: exclusion;
     .navbar a{
         color: rgba(255, 255, 255, 0.7);
-        padding: 1.5% 0;
+        padding: 2% 0;
         font-weight: bold;
         box-sizing: border-box;
     }
@@ -50,12 +53,17 @@ header {
     }
     .navbar a:hover{
         color: var(--white-color);
+        cursor: pointer;
+    }
+    .nav-link.active{
+        color: var(--main-color) !important;
     }
     .caption{
         width: 52%;
         min-width: 40vh;
         height: 90vh;
         margin: 0 auto;
+        padding-top: 6%;
         color: var(--white-color);
         h1 {
             font-size: 3.75rem;
@@ -74,6 +82,9 @@ header {
         }
         .find-out-btn:hover{
             background-color: #b6482a;
+        }
+        @media (max-width: 575.98px) { 
+            width: 100%;
         }
     }
 }
@@ -177,4 +188,10 @@ header {
     align-content: center;
 }
 /* end footer */
-
+.link-out{
+    color: black !important;
+    &:hover{
+        color: var(--main-color) !important;
+        cursor: pointer;
+    }
+}
