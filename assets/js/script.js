@@ -27,17 +27,28 @@ for (let i = 0; i < links.length; i++) {
 }
 window.addEventListener('scroll', function() {
 if (scroll > 0) {
-    navScroll.classList.add('bg-light');
-    navScroll.style = 'box-shadow: 0 2px 4px rgba(0,0,0,.1)';
-    links.forEach(link => {
-        link.classList.add('link-out');});
+    if (localStorage.getItem('theme') === 'dark'){
+        navScroll.classList.add('bg-dark');
+        navScroll.style = 'box-shadow: 0 2px 4px rgb(0, 0, 0)';
+        navScroll.style = 'transition: 0.5s';
+        links.forEach(link => {
+            link.classList.add('link-out-dark');});
+    } else {
+        navScroll.classList.add('bg-light');
+        navScroll.style = 'box-shadow: 0 2px 4px rgba(0,0,0,.1)';
+        navScroll.style = 'transition: 0.5s';
+        links.forEach(link => {
+            link.classList.add('link-out-light');});
+    }
 }else {
     navScroll.classList.remove('bg-light');
+    navScroll.classList.remove('bg-dark');
     navScroll.style = 'box-shadow: none';
     links.forEach(link => {
-        link.classList.remove('link-out');
+        link.classList.remove('link-out-dark');
+        link.classList.remove('link-out-light');
     }
-    );
+);
 }});
 let scrollUp = document.querySelector('.scroll-up');
 let about = document.querySelector('.about');
@@ -68,4 +79,32 @@ for (let i = 0; i < inputs.length; i++) {
         }
     });
 }
-
+//dark & light theme
+let darkIcon = document.querySelector('.fa-moon');
+let lightIcon = document.querySelector('.fa-sun');
+let footer = document.querySelector('footer');
+let html = document.querySelector('.html');
+let download = document.querySelector('.download');
+let darkMode = function() {
+    darkIcon.style = 'display: none';
+    lightIcon.style = 'display: block';
+    html.setAttribute('data-bs-theme', 'dark');
+    footer.classList.replace('bg-light', 'bg-black');
+    download.classList.add('bg-black');
+    localStorage.setItem('theme', 'dark');
+}
+let lightMode = function() {
+    darkIcon.style = 'display: block';
+    lightIcon.style = 'display: none';
+    html.setAttribute('data-bs-theme', 'light');
+    footer.classList.replace('bg-black', 'bg-light');
+    download.classList.remove('bg-black');
+    localStorage.setItem('theme', 'light');
+}
+darkIcon.addEventListener('click', darkMode);
+lightIcon.addEventListener('click', lightMode);
+if (localStorage.getItem('theme') === 'dark') {
+    darkMode();
+} else {
+    lightMode();
+}

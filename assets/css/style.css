@@ -101,7 +101,7 @@ header {
             width: 30%;
             min-width: 20vh;
             height: 10vh;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
         p ,h2{
             margin: 3% 0;
@@ -188,11 +188,17 @@ header {
     align-content: center;
 }
 /* end footer */
-.link-out{
+.link-out-light{
     color: black !important;
     &:hover{
         color: var(--main-color) !important;
         cursor: pointer;
+    }
+}
+.link-out-dark{
+    color: rgba(255, 255, 255, 0.7) !important;
+    &:hover{
+        color: white !important;
     }
 }
 /* start scrollup */
@@ -217,5 +223,9 @@ header {
     text-align: left;
     display: block;
     font-family: 'Times New Roman', Times, serif;
+    display: none;
+}
+/* dark & light theme */
+a.fa-sun{
     display: none;
 }

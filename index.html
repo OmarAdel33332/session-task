@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,6 +34,10 @@
                   </li>
                   <li>
                     <a class="nav-link link text-capitalize">contact</a>
+                  </li>
+                  <li>
+                    <a class="fa-solid fa-moon fa-2x nav-link link"></a>
+                    <a class="fa-regular fa-sun fa-2x nav-link link"></a>
                   </li>
                 </ul>
               </div>
@@ -240,17 +244,17 @@
             </div>
             <form class="form-inputs" method="post">
                 <div class="form-floating">
-                    <input type="text" class="form-control mb-3" placeholder="Enter Your Full Name" id="floatinginput"></input>
+                    <input type="text" name="username" class="form-control mb-3" placeholder="Enter Your Full Name" id="floatinginput"></input>
                     <label for="floatinginput" class="fw-semibold">Full Name</label>
                 </div>
                 <label class="invalid-label text-danger mb-3">A name is required.</label>
                 <div class="form-floating">
-                    <input type="email" class="form-control mb-3" id="floatingInput" placeholder="name@example.com">
+                    <input type="email" name="email" class="form-control mb-3" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput" class="fw-semibold">Email address</label>
                 </div>
                 <label class="invalid-label text-danger">An email address is required. <br>Email is not valid.</label>
                 <div class="form-floating">
-                    <input type="tel" class="form-control mb-3" id="floatingInput" placeholder="Enter Your Mobile Number">
+                    <input type="tel" name="phone" class="form-control mb-3" id="floatingInput" placeholder="Enter Your Mobile Number">
                     <label for="floatingInput" class="fw-semibold">Phone Number</label>
                 </div>
                 <label class="invalid-label text-danger mb-3">A phone number is required.</label>
