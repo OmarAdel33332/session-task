@@ -8,8 +8,8 @@
     --default-font-size : 16px;
     @media (max-width: 575.98px) { 
         --default-font-size : 13px !important;
-        button.navbar-toggler{
-            display: none;     
+        .navbar{
+            background-color: #222529;
         }
      }
     @media (min-width: 575.99px ) and (max-width: 767.98px) { 
